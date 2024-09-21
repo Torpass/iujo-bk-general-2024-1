@@ -12,7 +12,7 @@ export class AreaController {
   };
 
   one = async (req: Request, res: Response) => {
-    const {id}=req.params
+    const {id}= req.params
     const { status, message, data } = await getOne(parseInt(id) as number);
     return res.status(status).json({
       message,
